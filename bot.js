@@ -1,13 +1,13 @@
 ﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "2"
-var adminprefix = '2'
+var prefix = "B"
+var adminprefix = 'B'
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("$obc")) {
+    if (message.content.startsWith("Bobc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "2";
+  var prefix = "B";
 
   client.on("message", message => {
   
@@ -41,7 +41,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("$avatar")) {
+if (message.content.startsWith("Bavatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -56,7 +56,7 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('$adminbc')){
+if (message.content.startsWith('Badminbc')){
 if(!message.author.id === '476185102922285066') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -66,23 +66,23 @@ m.sendMessage(args)
 });
 
   client.on('message', msg => {
-    if(msg.content === '$help')
+    if(msg.content === 'Bhelp')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
   
   client.on("message", message => {
-    if (message.content === "$help") {
+    if (message.content === "Bhelp") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       $obc | لأرسال برود كاست للكل
+       Bobc | لأرسال برود كاست للكل
 
-       $bc  |  لأرسال برود كاست للأونلاين
+       Bbc  |  لأرسال برود كاست للأونلاين
 
-       $adminbc | برودكاست عادي
+       Badminbc | برودكاست عادي
 
        ** `)
    message.author.sendEmbed(embed)
