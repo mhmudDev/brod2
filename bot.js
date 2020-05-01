@@ -1,13 +1,13 @@
 ﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "B"
-var adminprefix = 'B'
+var prefix = "M"
+var adminprefix = 'M'
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("Bobc")) {
+    if (message.content.startsWith("Mobc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "B";
+  var prefix = "M";
 
   client.on("message", message => {
   
@@ -66,7 +66,7 @@ m.sendMessage(args)
 });
 
   client.on('message', msg => {
-    if(msg.content === 'Bhelp')
+    if(msg.content === 'Mhelp')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -78,11 +78,11 @@ m.sendMessage(args)
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       Bobc | لأرسال برود كاست للكل
+       Mobc | لأرسال برود كاست للكل
 
-       Bbc  |  لأرسال برود كاست للأونلاين
+       Mbc  |  لأرسال برود كاست للأونلاين
 
-       Badminbc | برودكاست عادي
+       Madminbc | برودكاست عادي
 
        ** `)
    message.author.sendEmbed(embed)
